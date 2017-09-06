@@ -1,6 +1,3 @@
-
-#FOR SOME REASON, THE RELATIVE WORKING DIRECTORY CHANGES UNEXPECTEDLY
-source("../../R/Arithmetics.R")
 library('testthat')
 
 test_that("Addition works", {
@@ -11,5 +8,5 @@ test_that("Addition works", {
 
 test_that("Multiplication works", {
   expect_equal(multiply(1, 2), 2)
-  
+
 })
