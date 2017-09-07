@@ -1,4 +1,5 @@
 library('testthat')
+source('R/Arithmetics.R')
 
 #Testing whether addition works.
 test_that("Addition works", {
