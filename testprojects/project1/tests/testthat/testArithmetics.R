@@ -1,5 +1,6 @@
 library('testthat')
 
+#Testing whether addition works.
 test_that("Addition works", {
   expect_equal(add(1, 2), 3)
   expect_equal(add(1, 2), 3.0)
