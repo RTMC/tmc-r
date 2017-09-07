@@ -1,8 +1,9 @@
 library('testthat')
 
 #We can define sources in the environment already in this file.
-source('R/Arithmetics.R')
+source('R/arithmetics.R')
+source('R/strings.R')
 
 
-output <- test_file('tests/testthat/testArithmetics.R', reporter="silent")
+output <- test_dir('tests/testthat/', reporter="silent")
 print(output)
