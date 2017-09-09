@@ -2,7 +2,7 @@ library('testthat')
 source('../../R/Arithmetics.R')
 
 #Testing whether addition works.
-test_that("Addition works#[point 1]", {
+test_that("Addition works#[point1]", {
   expect_equal(add(1, 2), 3)
   expect_equal(add(1, 2), 3.0)
   expect_equal(add(1, 4), 5)
