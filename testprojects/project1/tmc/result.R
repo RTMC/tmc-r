@@ -3,7 +3,7 @@ library('jsonlite')
 
 testthat_output <- test_dir('tests/testthat/', reporter="silent")
 
-results = c()
+results = list()
 
 for (test in testthat_output) {
   test_failed <- FALSE
@@ -42,9 +42,10 @@ for (test in testthat_output) {
         message=unbox(""),
         points=as.list(points_assoc))
   }
-  results <- c(results, test_result)
+  results[[length(results)+1]] <- test_result
 }
 
-#currently encoding is not utf-8... TODO: fix this
-json <-toJSON(results, pretty = TRUE)
+#json utf-8 coded:
+json <- enc2utf8(toJSON(results, pretty = TRUE))
+#encode json to utf-8 and write file
 write_json(json, ".results.json")
