@@ -1,1 +1,67 @@
-["{\n  \"backtrace\": [],\n  \"status\": \"passed\",\n  \"name\": \"Addition works\",\n  \"message\": \"\",\n  \"points\": [\n    [\"[point 1]\"]\n  ],\n  \"backtrace.1\": [],\n  \"status.1\": \"passed\",\n  \"name.1\": \"Multiplication works\",\n  \"message.1\": \"\",\n  \"points.1\": [\n    [\"[point1, point2]\"]\n  ],\n  \"backtrace.2\": [],\n  \"status.2\": \"passed\",\n  \"name.2\": \"Subtraction works\",\n  \"message.2\": \"\",\n  \"points.2\": [\n    [\"[point1, point2]\"]\n  ],\n  \"backtrace.3\": [],\n  \"status.3\": \"passed\",\n  \"name.3\": \"Division works\",\n  \"message.3\": \"\",\n  \"points.3\": [\n    [\"[point1, point2]\"]\n  ],\n  \"backtrace.4\": [],\n  \"status.4\": \"passed\",\n  \"name.4\": \"Constant string works\",\n  \"message.4\": \"\",\n  \"points.4\": [\n    [\"[point1, point2]\"]\n  ]\n}"]
+[
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Addition works",
+        "message": "",
+        "points": [
+            [
+                "[point 1]"
+            ]
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Multiplication works",
+        "message": "",
+        "points": [
+            [
+                "[point1, point2]"
+            ]
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Subtraction works",
+        "message": "",
+        "points": [
+            [
+                "[point1, point2]"
+            ]
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Division works",
+        "message": "",
+        "points": [
+            [
+                "[point1, point2]"
+            ]
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Constant string works",
+        "message": "",
+        "points": [
+            [
+                "[point1, point2]"
+            ]
+        ]
+    }
+]
