@@ -7,9 +7,7 @@
         "name": "Addition works",
         "message": "",
         "points": [
-            [
-                "point1"
-            ]
+            "point1"
         ]
     },
     {
@@ -20,12 +18,8 @@
         "name": "Multiplication works",
         "message": "",
         "points": [
-            [
-                "point1"
-            ],
-            [
-                "point2"
-            ]
+            "point1",
+            "point2"
         ]
     },
     {
@@ -36,12 +30,8 @@
         "name": "Subtraction works",
         "message": "",
         "points": [
-            [
-                "point1"
-            ],
-            [
-                "point2"
-            ]
+            "point1",
+            "point2"
         ]
     },
     {
@@ -52,12 +42,8 @@
         "name": "Division works",
         "message": "",
         "points": [
-            [
-                "point1"
-            ],
-            [
-                "point2"
-            ]
+            "point1",
+            "point2"
         ]
     },
     {
@@ -68,12 +54,9 @@
         "name": "Constant string works",
         "message": "",
         "points": [
-            [
-                "point1"
-            ],
-            [
-                "point2"
-            ]
+            "point1",
+            "point2"
         ]
     }
 ]
+
