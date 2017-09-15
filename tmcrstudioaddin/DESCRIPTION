@@ -15,3 +15,5 @@ Imports:
   rstudioapi,
   rjson,
   httr
+Depends:
+  testthat

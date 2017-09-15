@@ -1,4 +1,4 @@
 library(testthat)
-library(tmc-rstudio-addin)
+library(tmcrstudioaddin)
 
-test_check("tmc-rstudio-addin")
+test_check("tmcrstudioaddin")
