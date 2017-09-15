@@ -1,4 +1,6 @@
-# tmc-r
+# tmc-r 
+
+[https://travis-ci.org/RTMC/tmc-r.svg?branch=testing]
 
 ### Dokumentaatiota
 
