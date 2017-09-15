@@ -1,6 +1,9 @@
-print("ECHO")
+pointsForAllTests <- function(points) {
+  print( dirname(sys.frame(1)$ofile))
+}
 
-myTest <- function(desc, poings, code) {
+test <- function(desc, poings, code) {
+  
   if(test_that(desc, code)) {
     return(poings)  
   }
