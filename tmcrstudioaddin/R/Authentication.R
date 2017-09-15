@@ -10,14 +10,14 @@ authenticate <- function(username, password) {
   secret <- "86ef820fe2e191c1dfd61ccd21c60c42ddbc4de9adba0743e07917adeeefb554"
   body <- paste(sep = "", "grant_type=password&client_id=", client_id, "&client_secret=", secret,"&username=",
                 username, "&password=", password)
-  
+
   # Authenticate
   req <- POST(url = "https://tmc.mooc.fi/oauth/token", body = body)
-  
+
   # Extract the authentication token
   stop_for_status(x = req, task = "Authenticate with TMC")
   token <- paste("Bearer", content(req)$access_token)
-  
+
   return(token)
 }
 
@@ -28,12 +28,25 @@ authenticate <- function(username, password) {
 # Temporary testing/example function that fetches the data of a single course from TMC
 tempGetCourse <- function(token) {
   url <- "https://tmc.mooc.fi/api/v8/courses/199"
-  
+
   req <- GET(url = url, config = add_headers(Authorization = token))
   stop_for_status(x = req, task = "Fetching data from the TMC API")
   course <- content(req)
-  
+
   return(course)
+}
+
+# note: ord_id is a string, not int
+tempGetAllCourses <- function(token, org_id) {
+  url <- paste("https://tmc.mooc.fi/api/v8/core/org/", org_id, "/courses", sep = "")
+  # url <- "https://tmc.mooc.fi/api/v8/core/org/hy/courses"
+  print(url)
+
+  req <- GET(url = url, config = add_headers(Authorization = token))
+  stop_for_status(x = req, task = "Fetching data from the TMC API")
+  courses <- content(req)
+
+  return(courses)
 }
 
 # ?GET
