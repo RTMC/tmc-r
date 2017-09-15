@@ -1,6 +1,6 @@
 # tmc-r 
 
-![build status](https://travis-ci.org/RTMC/tmc-r.svg?branch=testing
+![build status](https://travis-ci.org/RTMC/tmc-r.svg?branch=testing)
 
 ### Dokumentaatiota
 
