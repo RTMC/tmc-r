@@ -6,8 +6,9 @@
 
 
 ### Definition of Done
-* Koodi toimii ja ei sisällä virheitä
-* Koodi on siistiä ja helposti luettavaa koko tiimille
-* Koodi on kattavasti ja kaikilta olennaisilta osilta automaattisesti testattu.
-* Taskin hyväksymisehdot täyttyvät.
-* (Koodi toimii testipalvelimella)
+* 
+* Code works and is (apparently) bug-free
+* Code is clean and easily readable to the whole team and commented if necessary
+* Relevant parts of the code are comprehensively tested
+* Acceptance criteria are fulfilled
+* Code works on testing server
