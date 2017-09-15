@@ -6,7 +6,6 @@
 
 
 ### Definition of Done
-* 
 * Code works and is (apparently) bug-free
 * Code is clean and easily readable to the whole team and commented if necessary
 * Relevant parts of the code are comprehensively tested
