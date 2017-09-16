@@ -85,7 +85,40 @@
 
         ],
         "status": "passed",
-        "name": "Variable 'x' has the correct value",
+        "name": "Exercise 1 is correct",
+        "message": "",
+        "points": [
+            null
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 2 is correct",
+        "message": "",
+        "points": [
+            null
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 3 is correct",
+        "message": "",
+        "points": [
+            null
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 4 is correct",
         "message": "",
         "points": [
             null
