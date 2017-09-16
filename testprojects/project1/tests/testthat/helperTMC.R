@@ -1,10 +1,8 @@
 pointsForAllTests <- function(points) {
-  print( dirname(sys.frame(1)$ofile))
+  .GlobalEnv$points_for_all_tests <- points
 }
 
-test <- function(desc, poings, code) {
-  
-  if(test_that(desc, code)) {
-    return(poings)  
-  }
+test <- function(desc, points, code) {
+  .GlobalEnv$points[[desc]] <- points
+  test_that(desc, code)
 }
