@@ -1,8 +1,17 @@
 library('testthat')
-source('../../R/arithmetics.R')
+
+source("../../R/arithmetics.R")
+
+pointsForAllTests(c("r3"))
+
+test("Addition works", c("point1","point2"), {
+  expect_equal(add(1, 2), 1)
+  expect_equal(add(1, 2), 3.0)
+  expect_equal(add(1, 4), 5)
+})
 
 #Testing whether addition works.
-test_that("Addition works#[point1]", {
+test("Addition works#[point1]", c("point3"), {
   expect_equal(add(1, 2), 3)
   expect_equal(add(1, 2), 3.0)
   expect_equal(add(1, 4), 5)

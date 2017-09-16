@@ -3,6 +3,17 @@
         "backtrace": [
 
         ],
+        "status": "failed",
+        "name": "Addition works",
+        "message": "",
+        "points": [
+            null
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
         "status": "passed",
         "name": "Addition works",
         "message": "",
