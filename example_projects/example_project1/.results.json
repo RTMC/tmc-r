@@ -51,6 +51,28 @@
 
         ],
         "status": "passed",
+        "name": "Matrix transpose with [[1,2]] works",
+        "message": "",
+        "points": [
+            "point1"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Matrix transpose with [[1,2],[3,4]] works",
+        "message": "",
+        "points": [
+            "point1"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
         "name": "Constant string works",
         "message": "",
         "points": [

@@ -23,7 +23,7 @@ for (test in testthat_output) {
     points_assoc <- gsub("\\[|\\]", "", points_assoc)
     points_assoc <- gsub(",", "", points_assoc)
     points_assoc <- as.list(lapply(strsplit(points_assoc, '\\s+')[[1]], unbox))
-    
+
     #Contains the name of the test
     test_name <- test_description[[1]][1]
 
