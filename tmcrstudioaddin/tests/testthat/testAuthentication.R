@@ -1,5 +1,3 @@
-source('../../R/Authentication.R')
-
 test_that("Authentication gives a token", {
   token <- authenticate("rtest", "asdasdasd")
   expect_is(token, "character")
