@@ -1,6 +1,6 @@
 library('testthat')
 
-source("../../R/Arithmetics.R")
+source("../../R/arithmetics.R")
 
 pointsForAllTests(c("r1"))
 

@@ -1,0 +1,4 @@
+Try to install the package: go to its' parent directory, open R and type "install.packages("tmcrstudioaddin",repos=NULL, type="source")". 
+If this fails, install RStudio version that is at least 1.1.67 (from https://www.rstudio.com/products/rstudio/download/preview/). You may need to install it from terminal with e.g. dkpg (not with Software Center). 
+Also install the required packages manually (with install.packages("package_name").
+Once the package tmcrstudioaddin is installed, open RStudio and select "Addins" from upper bar and there "TMC login".

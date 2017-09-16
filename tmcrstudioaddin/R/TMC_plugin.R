@@ -3,6 +3,7 @@
 
 # use ?function_name to get information from function function_name
 
+source("R/Authentication.R")
 loginGadget <- function() {
 
   ui <- miniPage(
@@ -64,24 +65,22 @@ loginGadget <- function() {
     # Defining actions for buttons etc
     # UI elements and their actions are given as arguments
     observeEvent(input$login, {
-
       message <- ""
       title <- ""
-
-      if (input$username == "user" && input$password == "1234") {
+      response = authenticate(input$username,input$password)
+      # if Bearer token is retrieved login was successful
+      if (grepl('Bearer',response[1])) {
         title <- "Success!"
         message <- "Login successful!"
+        # show error and error message
       } else {
-
-        title <- "Failure"
-        message <- "Login failure"
+        title <- response$error
+        message <- response$error_description
       }
-
       # showDialog() needs RStudion versio > 1.1.67
       showDialog(title = title, message = message, url = "")
     }
     )
-
     # render*-function renders UI content and corresponds to *Output-function in UI
     # Here the "textOutput(outputId = "courseDisplay")" in UI is declared to
     # render the value from "selectInput(inputId = "courseSelect", ...)"
@@ -89,6 +88,5 @@ loginGadget <- function() {
       input$courseSelect
     })
   }
-
   runGadget(ui, server, viewer = dialogViewer("TMC login"))
 }
