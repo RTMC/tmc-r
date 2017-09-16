@@ -79,6 +79,17 @@
             "point1",
             "point2"
         ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Variable 'x' has the correct value",
+        "message": "",
+        "points": [
+            null
+        ]
     }
 ]
 

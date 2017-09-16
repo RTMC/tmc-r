@@ -1,5 +1,5 @@
 library('testthat')
-source('../../R/Arithmetics.R')
+source('../../R/arithmetics.R')
 
 #Testing whether addition works.
 test_that("Addition works#[point1]", {
