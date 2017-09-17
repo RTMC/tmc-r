@@ -1,6 +1,7 @@
-# tmc-r 
+# tmc-r
 
-![build status](https://travis-ci.org/RTMC/tmc-r.svg?branch=testing)
+[![Build Status](https://travis-ci.org/RTMC/tmc-r.svg?branch=master)](https://travis-ci.org/RTMC/tmc-r)
+[![Coverage Status](https://coveralls.io/repos/github/RTMC/tmc-r/badge.svg)](https://coveralls.io/github/RTMC/tmc-r)
 
 ### Dokumentaatiota
 
