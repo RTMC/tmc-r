@@ -6,7 +6,7 @@ points <- list()
 points_for_all_tests <- list
 
 #TODO: run all tests with test_file from tests/testthat folder
-testthat_output <- test_file('tests/testthat/testArithmetics.R', reporter="silent")
+testthat_output <- test_file('tests/testthat/testWeek1.R', reporter="silent")
 
 results = list()
 
