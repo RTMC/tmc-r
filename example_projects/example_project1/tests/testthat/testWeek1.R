@@ -59,7 +59,7 @@ test_that("Excercise 9 is correct", {
 
 test_that("Excercise 10 is correct", {
   expect_true(number10 < 10)
-  
+
   expect_true(dim(E_10)[1] == 4)
   expect_true(dim(E_10)[2] == 3)
 })
