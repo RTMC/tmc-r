@@ -5,7 +5,7 @@ source("../../R/arithmetics.R")
 pointsForAllTests(c("r1"))
 
 test("Addition works", c("r1.1","r1.2"), {
-  expect_equal(add(1, 2), 1)
+  expect_equal(add(1, 2), 3)
   expect_equal(add(1, 2), 3.0)
   expect_equal(add(1, 4), 5)
 })

@@ -5,8 +5,14 @@ library('jsonlite')
 points <- list()
 points_for_all_tests <- list
 
-#TODO: run all tests with test_file from tests/testthat folder
-testthat_output <- test_file('tests/testthat/testWeek1.R', reporter="silent")
+testthat_output <- list()
+#Lists all the files in the path beginning with "test" and ending in ".R"
+testFiles <- list.files(path="tests/testthat", pattern = "test.*.R", full.names = T, recursive = FALSE)
+print(testFiles)
+for (testFile in testFiles) {
+  #Adds the output from the tests in the file to the list
+  testthat_output <- c(testthat_output, test_file(testFile))
+}
 
 results = list()
 
