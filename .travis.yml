@@ -4,5 +4,12 @@ language: R
 sudo: false
 cache: packages
 warnings_are_errors: false
+
+r_github_packages:
+ - jimhester/covr
+
 before_install:
   - cd tmcrstudioaddin
+  
+after_success:
+  - Rscript -e 'library(covr);coveralls()'
