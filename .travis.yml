@@ -5,11 +5,16 @@ sudo: false
 cache: packages
 warnings_are_errors: false
 
-r_github_packages:
- - jimhester/covr
+r_packages:
+ - covr
 
 before_install:
-  - cd tmcrstudioaddin
+  - cd $REPO_TO_TEST
   
+env:
+  matrix:
+        - REPO_TO_TEST=tmcrstudioaddin
+
+
 after_success:
   - Rscript -e 'library(covr);coveralls()'
