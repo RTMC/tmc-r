@@ -5,9 +5,20 @@ testthat_output <- test_dir('tests/testthat/', reporter="silent")
 
 results = list()
 
+#Compiles the list of points from the test description
+points_compiler <- function(desc) {
+    points_assoc <- desc[[1]][2]
+    points_assoc <- gsub("\\[|\\]", "", points_assoc)
+    points_assoc <- gsub(",", "", points_assoc)
+    points_assoc <- as.list(lapply(strsplit(points_assoc, '\\s+')[[1]], unbox))
+}
+
+#We go through the test output
 for (test in testthat_output) {
   test_failed <- FALSE
   test_failures <- c()
+
+  #For single tests, we mark whether it passed or failed.
   for (result in test$results) {
     if (format(result) != "As expected") {
       test_failed <- TRUE
@@ -15,16 +26,10 @@ for (test in testthat_output) {
     }
   }
 
+  #If the test failed, we produce a corresponding output
   if (test_failed) {
     test_description <- strsplit(format(test$test), "#")
-
-    #Contains an array of the points associated with this test.
-    points_assoc <- test_description[[1]][2]
-    points_assoc <- gsub("\\[|\\]", "", points_assoc)
-    points_assoc <- gsub(",", "", points_assoc)
-    points_assoc <- as.list(lapply(strsplit(points_assoc, '\\s+')[[1]], unbox))
-
-    #Contains the name of the test
+    points <- points_compiler(test_description)
     test_name <- test_description[[1]][1]
 
     print(paste(test_name, ": FAIL", sep = ""))
@@ -34,18 +39,15 @@ for (test in testthat_output) {
         status=unbox("failed"),
         name=unbox(format(test_name)),
         message=unbox(""),
-        points=points_assoc)
-  } else {
+        points=points)
+
+  }
+  #If the test passed, we produce a corresponding output.
+  else {
     test_description <- strsplit(format(test$test), "#")
 
-    #Contains an array of the points associated with this test.
-    points_assoc <- test_description[[1]][2]
-    points_assoc <- gsub("\\[|\\]", "", points_assoc)
-    points_assoc <- gsub(",", "", points_assoc)
-    points_assoc <- as.list(lapply(strsplit(points_assoc, '\\s+')[[1]], unbox))
+    points <- points_compiler(test_description)
 
-
-    #Contains the name of the test
     test_name <- test_description[[1]][1]
 
     print(paste(test_name, ": PASS", sep = ""))
@@ -53,7 +55,7 @@ for (test in testthat_output) {
         status=unbox("passed"),
         name=unbox(format(test_name)),
         message=unbox(""),
-        points=points_assoc)
+        points=points)
   }
   results[[length(results)+1]] <- test_result
 }
