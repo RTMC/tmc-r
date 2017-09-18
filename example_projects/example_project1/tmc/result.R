@@ -92,7 +92,7 @@ for (test in testthat_output) {
 
   if (test_failed) {
     print(paste(test_name, ": FAIL", sep = ""))
-    print(paste("   ", test_failures, sep = ""))
+    print(paste("   ", test_message, sep = ""))
   } else {
     print(paste(test_name, ": PASS", sep = ""))
   }
