@@ -8,7 +8,8 @@
         "message": "",
         "points": [
             "r1.1",
-            "r1.2"
+            "r1.2",
+            "r1"
         ]
     },
     {
@@ -20,7 +21,8 @@
         "message": "",
         "points": [
             "r1.3",
-            "r1.4"
+            "r1.4",
+            "r1"
         ]
     },
     {
@@ -31,7 +33,8 @@
         "name": "Subtraction works",
         "message": "",
         "points": [
-            "r1.5"
+            "r1.5",
+            "r1"
         ]
     },
     {
@@ -42,7 +45,8 @@
         "name": "Division works",
         "message": "",
         "points": [
-            "r1.6"
+            "r1.6",
+            "r1"
         ]
     },
     {
@@ -52,9 +56,9 @@
         "status": "passed",
         "name": "Test with no points",
         "message": "",
-        "points": {
-
-        }
+        "points": [
+            "r1"
+        ]
     },
     {
         "backtrace": [
@@ -64,7 +68,8 @@
         "name": "Matrix transpose with [[1,2]] works",
         "message": "",
         "points": [
-            "r2.1"
+            "r2.1",
+            "r2"
         ]
     },
     {
@@ -75,7 +80,8 @@
         "name": "Matrix transpose with [[1,2],[3,4]] works",
         "message": "",
         "points": [
-            "r2.2"
+            "r2.2",
+            "r2"
         ]
     },
     {
@@ -86,7 +92,8 @@
         "name": "Constant string works",
         "message": "",
         "points": [
-            "r3.1"
+            "r3.1",
+            "r3"
         ]
     },
     {
@@ -97,7 +104,8 @@
         "name": "Exercise 1 is correct",
         "message": "",
         "points": [
-            "r4.1"
+            "r4.1",
+            "r4"
         ]
     },
     {
@@ -108,7 +116,8 @@
         "name": "Exercise 2 is correct",
         "message": "",
         "points": [
-            "r4.2"
+            "r4.2",
+            "r4"
         ]
     },
     {
@@ -120,7 +129,8 @@
         "message": "",
         "points": [
             "r4.3",
-            "r4.4"
+            "r4.4",
+            "r4"
         ]
     },
     {
@@ -131,7 +141,8 @@
         "name": "Exercise 4 is correct",
         "message": "",
         "points": [
-            "r4.5"
+            "r4.5",
+            "r4"
         ]
     },
     {
@@ -142,7 +153,8 @@
         "name": "Exercise 5 is correct",
         "message": "",
         "points": [
-            "r4.6"
+            "r4.6",
+            "r4"
         ]
     },
     {
@@ -150,10 +162,12 @@
 
         ],
         "status": "passed",
-        "name": "Excercise 6 is correct",
+        "name": "Exercise 6 is correct",
         "message": "",
         "points": [
-            "r4.8"
+            "r4.8",
+            "r4",
+            "r4"
         ]
     },
     {
@@ -161,10 +175,12 @@
 
         ],
         "status": "passed",
-        "name": "Excercise 6 is correct",
+        "name": "Exercise 6 is correct",
         "message": "",
         "points": [
-            "r4.8"
+            "r4.8",
+            "r4",
+            "r4"
         ]
     },
     {
@@ -172,10 +188,11 @@
 
         ],
         "status": "passed",
-        "name": "Excercise 7 is correct",
+        "name": "Exercise 7 is correct",
         "message": "",
         "points": [
-            "r4.9"
+            "r4.9",
+            "r4"
         ]
     },
     {
@@ -183,10 +200,11 @@
 
         ],
         "status": "passed",
-        "name": "Excercise 8 is correct",
+        "name": "Exercise 8 is correct",
         "message": "",
         "points": [
-            "r4.10"
+            "r4.10",
+            "r4"
         ]
     },
     {
@@ -194,10 +212,11 @@
 
         ],
         "status": "passed",
-        "name": "Excercise 9 is correct",
+        "name": "Exercise 9 is correct",
         "message": "",
         "points": [
-            "r4.11"
+            "r4.11",
+            "r4"
         ]
     },
     {
@@ -205,10 +224,11 @@
 
         ],
         "status": "passed",
-        "name": "Excercise 10 is correct",
+        "name": "Exercise 10 is correct",
         "message": "",
         "points": [
-            "r4.12"
+            "r4.12",
+            "r4"
         ]
     },
     {
@@ -216,10 +236,11 @@
 
         ],
         "status": "passed",
-        "name": "Excercise 11 is correct",
+        "name": "Exercise 11 is correct",
         "message": "",
         "points": [
-            "r4.13"
+            "r4.13",
+            "r4"
         ]
     },
     {
@@ -227,10 +248,11 @@
 
         ],
         "status": "passed",
-        "name": "Excercise 12 is correct",
+        "name": "Exercise 12 is correct",
         "message": "",
         "points": [
-            "r4.14"
+            "r4.14",
+            "r4"
         ]
     }
 ]
