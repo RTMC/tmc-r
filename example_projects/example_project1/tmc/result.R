@@ -59,7 +59,12 @@ results = list()
 for (test in testthat_output) {
   test_name <- test$test
   #print(points[[test$test]])
+  
   test_points <- points[[test_name]]
+  #if there are no points for a test, lets assign an empty vector
+  if (is.null(test_points)) {
+    test_points <- vector()
+  }
 
   test_failed <- FALSE
   test_failures <- c()

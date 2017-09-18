@@ -29,3 +29,7 @@ test("Division works", c("r1.6"), {
 test("Test with no points", c(), {
   expect_equal(1,1)
 })
+
+test("Dummy test set to fail/pass", c(), {
+  expect_true(FALSE)
+})
