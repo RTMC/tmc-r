@@ -7,7 +7,8 @@
         "name": "Addition works",
         "message": "",
         "points": [
-            "point1"
+            "r1.1",
+            "r1.2"
         ]
     },
     {
@@ -18,8 +19,8 @@
         "name": "Multiplication works",
         "message": "",
         "points": [
-            "point1",
-            "point2"
+            "r1.3",
+            "r1.4"
         ]
     },
     {
@@ -30,8 +31,7 @@
         "name": "Subtraction works",
         "message": "",
         "points": [
-            "point1",
-            "point2"
+            "r1.5"
         ]
     },
     {
@@ -42,9 +42,19 @@
         "name": "Division works",
         "message": "",
         "points": [
-            "point1",
-            "point2"
+            "r1.6"
         ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Test with no points",
+        "message": "",
+        "points": {
+
+        }
     },
     {
         "backtrace": [
@@ -54,7 +64,7 @@
         "name": "Matrix transpose with [[1,2]] works",
         "message": "",
         "points": [
-            "point1"
+            "r2.1"
         ]
     },
     {
@@ -65,7 +75,7 @@
         "name": "Matrix transpose with [[1,2],[3,4]] works",
         "message": "",
         "points": [
-            "point1"
+            "r2.2"
         ]
     },
     {
@@ -76,8 +86,151 @@
         "name": "Constant string works",
         "message": "",
         "points": [
-            "point1",
-            "point2"
+            "r3.1"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 1 is correct",
+        "message": "",
+        "points": [
+            "r4.1"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 2 is correct",
+        "message": "",
+        "points": [
+            "r4.2"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 3 is correct",
+        "message": "",
+        "points": [
+            "r4.3",
+            "r4.4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 4 is correct",
+        "message": "",
+        "points": [
+            "r4.5"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 5 is correct",
+        "message": "",
+        "points": [
+            "r4.6"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Excercise 6 is correct",
+        "message": "",
+        "points": [
+            "r4.8"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Excercise 6 is correct",
+        "message": "",
+        "points": [
+            "r4.8"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Excercise 7 is correct",
+        "message": "",
+        "points": [
+            "r4.9"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Excercise 8 is correct",
+        "message": "",
+        "points": [
+            "r4.10"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Excercise 9 is correct",
+        "message": "",
+        "points": [
+            "r4.11"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Excercise 10 is correct",
+        "message": "",
+        "points": [
+            "r4.12"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Excercise 11 is correct",
+        "message": "",
+        "points": [
+            "r4.13"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Excercise 12 is correct",
+        "message": "",
+        "points": [
+            "r4.14"
         ]
     }
 ]
