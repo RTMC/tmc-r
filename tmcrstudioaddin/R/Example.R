@@ -1,3 +1,0 @@
-returnsTrue <- function() {
-  return(TRUE)
-}
