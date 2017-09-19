@@ -42,37 +42,37 @@ test("Exercise 6 is correct", c("r4.7"), {
     expect_equal(A, matrix(c(3, 5, 6, 1/2, sqrt(5), 16, 0, 2, 0),nrow = 3, ncol = 3, byrow = TRUE))
 })
 
-test("Exercise 6 is correct", c("r4.8"), {
+test("Exercise 7 is correct", c("r4.8"), {
   expect_equal(A, help_A)
 })
 
-test("Exercise 7 is correct", c("r4.9"), {
+test("Exercise 8 is correct", c("r4.9"), {
   expect_equal(B, c(1, 1, 0)%*%solve(help_A))
 })
 
-test("Exercise 8 is correct", c("r4.10"), {
+test("Exercise 9 is correct", c("r4.10"), {
   expect_equal(I_3, diag(c(1, 1, 1)))
   expect_equal(A_8, help_A)
 })
 
-test("Exercise 9 is correct", c("r4.11"), {
+test("Exercise 10 is correct", c("r4.11"), {
   expect_false(is_eq_matrix)
 })
 
-test("Exercise 10 is correct", c("r4.12"), {
+test("Exercise 11 is correct", c("r4.12"), {
   expect_true(number10 < 10)
 
   expect_true(dim(E_10)[1] == 4)
   expect_true(dim(E_10)[2] == 3)
 })
 
-test("Exercise 11 is correct", c("r4.13"), {
+test("Exercise 12 is correct", c("r4.13"), {
   M <- matrix(1:100, ncol=2)
   M[c(F, T)] <- NA
   expect_equal(C_11, M)
 })
 
-test("Exercise 12 is correct", c("r4.14"), {
+test("Exercise 13 is correct", c("r4.14"), {
   M <- matrix(1:100, ncol=2)
   M[c(F, T)] <- 0
   expect_equal(C_12, M)
