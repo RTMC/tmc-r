@@ -28,16 +28,15 @@ checkThatAllPassed <- function(test_output) {
   return(ret)
 }
 
-iteratorForAll <- 1
-
 #Adds the points from a single test file to all the tests in the file
 #returns points, so that the modified points list is updated
 addPointsToAllTests <- function(test_output) {
   for (test in test_output) {
-    points[[test$test]] <- c(points[[test$test]], points_for_all_tests[iteratorForAll])
-    #print(points[[test$test]])
+    if (!(points_for_all_tests %in% points[[test$test]])) {
+      points[[test$test]] <- c(points[[test$test]], points_for_all_tests)
+      #print(points[[test$test]])
+    }
   }
-  iteratorForAll = iteratorForAll + 1
   return (points)
 }
 
