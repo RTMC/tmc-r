@@ -11,6 +11,7 @@ CheckIfResultCorrect <- function(test) {
   for (result in test$results) {
     if (format(result) != "As expected") {
       ret <- FALSE
+      break
     }
   }
   return (ret)
@@ -39,19 +40,21 @@ AddPointsToAllTests <- function(test_output) {
   return (points)
 }
 
-PrintResult <- function(status) {
-  if (status) {
-    print(paste(testName, ": FAIL", sep = ""))
-    print(paste("   ", testMessage, sep = ""))
+PrintResult <- function(name, message, failed) {
+  if (failed) {
+    print(paste(name, ": FAIL", sep = ""))
+    print(paste("   ", message, sep = ""))
   } else {
-    print(paste(testName, ": PASS", sep = ""))
+    print(paste(name, ": PASS", sep = ""))
   }
 }
 
 #Returns message from failed results
 #Currently supports only results that used calls
 MessageFromFailedResult <- function(result) {
-  if (is.null(result$call)) return("")
+  if (is.null(result$call)) {
+    return("")
+  }
   #language that failed the test. for example call expect_equal(1,2)
   language <- toString(result$call[[1]])
   return (paste(sep="", "Failed with call: ", language,"\n", result$message))
@@ -88,26 +91,31 @@ for (testFile in testFiles) {
   testthatOutput <- c(testthatOutput, testFileOutput)
 }
 
-results = list()
-
-for (test in testthatOutput) {
-  testName <- test$test
-  testPoints <- GetTestPoints(testName)
-  testFailed <- FALSE
-  testStatus <- "passed"
-  testMessage <- ""
-  for (result in test$results) {
-    if (format(result) != "As expected") {
-      testFailed <- TRUE
-      testStatus <- "failed"
-      testMessage <- paste(sep = "", testMessage, MessageFromFailedResult(result))
+CreateResults <- function(testthatOutput) {
+  results = list()
+  for (test in testthatOutput) {
+    testName <- test$test
+    testPoints <- GetTestPoints(testName)
+    testFailed <- FALSE
+    testStatus <- "passed"
+    testMessage <- ""
+    for (result in test$results) {
+      if (format(result) != "As expected") {
+        testFailed <- TRUE
+        testStatus <- "failed"
+        testMessage <- paste(sep = "", testMessage, MessageFromFailedResult(result))
+      }
     }
+    PrintResult(testName, testMessage, testFailed)
+    testResult <- CreateTestResult(testStatus, testName, testMessage,testPoints, "")
+    #Add test result to results
+    results[[length(results)+1]] <- testResult
   }
-  PrintResult(testFailed)
-  testResult <- CreateTestResult(testStatus, testName, testMessage,testPoints, "")
-  #Add test result to results
-  results[[length(results)+1]] <- testResult
+  return (results)
 }
+
+
+results <- CreateResults(testthatOutput)
 
 #json utf-8 coded:
 json <- enc2utf8(toJSON(results, pretty = FALSE))
