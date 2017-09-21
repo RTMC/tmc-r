@@ -19,3 +19,11 @@ DummyFunction <- function() {
   # A dumy function for testthat testing (before real tests)
   return(TRUE)
 }
+
+Dummy2 <- function() {
+  return(T)
+}
+
+Dummy3 <- function() {
+  return(F)
+}
