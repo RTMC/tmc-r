@@ -134,3 +134,7 @@ runTests <- function(project_path, print = FALSE) {
                      points=testPoints)
   return(testResult)
 }
+
+DummyFunction <- function() {
+  return(TRUE)
+}
