@@ -23,16 +23,16 @@ runTests <- function(project_path, print = FALSE) {
   for (testFile in testFiles) {
     testFileOutput <- test_file(testFile, reporter = "silent")
     #Modifies the points because they were added to all the tests.
-    points <- AddPointsToAllTests(testFileOutput)
+    points <- .AddPointsToAllTests(testFileOutput)
     #Adds the output from the tests in the file to the list
     testthatOutput <- c(testthatOutput, testFileOutput)
   }
 
-  CreateResults <- function(testthatOutput) {
+.CreateResults <- function(testthatOutput) {
     results = list()
     for (test in testthatOutput) {
       testName <- test$test
-      testPoints <- GetTestPoints(testName)
+      testPoints <- .GetTestPoints(testName)
       testFailed <- FALSE
       testStatus <- "passed"
       testMessage <- ""
@@ -43,8 +43,8 @@ runTests <- function(project_path, print = FALSE) {
           testMessage <- paste(sep = "", testMessage, MessageFromFailedResult(result))
         }
       }
-      PrintResult(testName, testMessage, testFailed)
-      testResult <- CreateTestResult(testStatus, testName, testMessage,testPoints, "")
+      .PrintResult(testName, testMessage, testFailed)
+      testResult <- .CreateTestResult(testStatus, testName, testMessage,testPoints, "")
       #Add test result to results
       results[[length(results)+1]] <- testResult
     }
@@ -52,7 +52,7 @@ runTests <- function(project_path, print = FALSE) {
   }
 
 
-  results <- CreateResults(testthatOutput)
+  results <- .CreateResults(testthatOutput)
 
   #json utf-8 coded:
   json <- enc2utf8(toJSON(results, pretty = FALSE))
