@@ -30,7 +30,7 @@ test("Test with no points", c(), {
   expect_equal(1,1)
 })
 
-test("Dummy test set to fail", c(), {
+test("Dummy test set to fail", c("r1.7"), {
   expect_true(FALSE)
   expect_equal(1,2)
 })
