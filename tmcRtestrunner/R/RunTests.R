@@ -8,6 +8,7 @@ runTests <- function(project_path, print = FALSE) {
   #  print: If TRUE, prints results; if not, not. DEFAULT is FALSE.
   #
 
+  return(TRUE)
 
 }
 
