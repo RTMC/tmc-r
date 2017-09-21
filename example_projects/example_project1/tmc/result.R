@@ -1,4 +1,4 @@
-library('testthat')
+llibrary('testthat')
 library('jsonlite')
 
 #declaring variables to global environment that for example helperTMC.R can use
