@@ -10,11 +10,11 @@ r_packages:
 
 before_install:
   - cd $REPO_TO_TEST
-  
+
 env:
   matrix:
         - REPO_TO_TEST=tmcrstudioaddin
-
+        - REPO_TO_TEST=tmcRtestrunner
 
 after_success:
   - Rscript -e 'library(covr);coveralls()'
