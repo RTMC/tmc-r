@@ -7,7 +7,8 @@
         "name": "Addition works",
         "message": "",
         "points": [
-            "point1"
+            "r1.1",
+            "r1.2"
         ]
     },
     {
@@ -18,8 +19,8 @@
         "name": "Multiplication works",
         "message": "",
         "points": [
-            "point1",
-            "point2"
+            "r1.3",
+            "r1.4"
         ]
     },
     {
@@ -30,8 +31,7 @@
         "name": "Subtraction works",
         "message": "",
         "points": [
-            "point1",
-            "point2"
+            "r1.5"
         ]
     },
     {
@@ -42,8 +42,29 @@
         "name": "Division works",
         "message": "",
         "points": [
-            "point1",
-            "point2"
+            "r1.6"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Test with no points",
+        "message": "",
+        "points": [
+
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "failed",
+        "name": "Dummy test set to fail",
+        "message": "Failed with call: expect_true, FALSE\nFALSE isn't true.\nFailed with call: expect_equal, 1, 2\n1 not equal to 2.\n1/1 mismatches\n[1] 1 - 2 == -1\n",
+        "points": [
+
         ]
     },
     {
@@ -54,7 +75,8 @@
         "name": "Matrix transpose with [[1,2]] works",
         "message": "",
         "points": [
-            "point1"
+            "r2.1",
+            "r2"
         ]
     },
     {
@@ -65,7 +87,8 @@
         "name": "Matrix transpose with [[1,2],[3,4]] works",
         "message": "",
         "points": [
-            "point1"
+            "r2.2",
+            "r2"
         ]
     },
     {
@@ -76,8 +99,165 @@
         "name": "Constant string works",
         "message": "",
         "points": [
-            "point1",
-            "point2"
+            "r3.1",
+            "r3"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 1 is correct",
+        "message": "",
+        "points": [
+            "r4.1",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 2 is correct",
+        "message": "",
+        "points": [
+            "r4.2",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 3 is correct",
+        "message": "",
+        "points": [
+            "r4.3",
+            "r4.4",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 4 is correct",
+        "message": "",
+        "points": [
+            "r4.5",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 5 is correct",
+        "message": "",
+        "points": [
+            "r4.6",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 6 is correct",
+        "message": "",
+        "points": [
+            "r4.8",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 6 is correct",
+        "message": "",
+        "points": [
+            "r4.8",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 7 is correct",
+        "message": "",
+        "points": [
+            "r4.9",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 8 is correct",
+        "message": "",
+        "points": [
+            "r4.10",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 9 is correct",
+        "message": "",
+        "points": [
+            "r4.11",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 10 is correct",
+        "message": "",
+        "points": [
+            "r4.12",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 11 is correct",
+        "message": "",
+        "points": [
+            "r4.13",
+            "r4"
+        ]
+    },
+    {
+        "backtrace": [
+
+        ],
+        "status": "passed",
+        "name": "Exercise 12 is correct",
+        "message": "",
+        "points": [
+            "r4.14",
+            "r4"
         ]
     }
 ]
