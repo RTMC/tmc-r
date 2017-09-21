@@ -11,5 +11,5 @@ test_that("Dummy2 works", {
 })
 
 test_that("Dummy3 works", {
-  expect_true(Dummy3())
+  expect_false(Dummy3())
 })
