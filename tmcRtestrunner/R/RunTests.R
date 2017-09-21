@@ -40,7 +40,7 @@ runTests <- function(project_path, print = FALSE) {
         if (format(result) != "As expected") {
           testFailed <- TRUE
           testStatus <- "failed"
-          testMessage <- paste(sep = "", testMessage, MessageFromFailedResult(result))
+          testMessage <- paste(sep = "", testMessage, .MessageFromFailedResult(result))
         }
       }
       .PrintResult(testName, testMessage, testFailed)
