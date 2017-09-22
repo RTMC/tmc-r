@@ -20,6 +20,7 @@ runTests <- function(project_path, print=FALSE) {
 
 GetTestResults <- function(project_path, print = FALSE) {
   setwd(project_path)
+  print(project_path)
   #declaring variables to global environment that for example helperTMC.R can use
   points <- list()
   points_for_all_tests <- list()
