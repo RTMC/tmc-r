@@ -2,6 +2,7 @@ path <- file.path(getwd())
 path <- dirname(dirname(dirname(path)))
 path_to_example1 <- paste(sep = "", path, "/example_projects/example_project1")
 path_to_json <- paste(set="", path_to_example1, "/.results.json")
+
 test_that("Dummy test before real tests.", {
   expect_true(DummyFunction())
 })
@@ -20,4 +21,9 @@ test_that("Hidden functions work", {
 
 test_that("Tests pass", {
   expect_true(T)
+  results <- GetTestResults(path_to_example1)
+  string <- format(results[[1]]$results[[1]])
+  string2 <- "As expected"
+
+  expect_equal(string, string2)
 })

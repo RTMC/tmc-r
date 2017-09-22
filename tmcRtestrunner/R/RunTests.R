@@ -11,8 +11,6 @@ runTests <- function(project_path, print=FALSE) {
 
   tmcrtestrunner_project_path <- getwd()
 
-  setwd(project_path)
-
   results <- GetTestResults(project_path, print)
   .WriteJson(results)
 
@@ -22,6 +20,7 @@ runTests <- function(project_path, print=FALSE) {
 
 GetTestResults <- function(project_path, print = FALSE) {
 
+  setwd(project_path)
   #declaring variables to global environment that for example helperTMC.R can use
   points <- list()
   points_for_all_tests <- list()
@@ -30,6 +29,7 @@ GetTestResults <- function(project_path, print = FALSE) {
 
   #Lists all the files in the path beginning with "test" and ending in ".R"
   testFiles <- list.files(path="tests/testthat", pattern = "test.*\\.R", full.names = T, recursive = FALSE)
+  print(getwd())
   for (testFile in testFiles) {
     testFileOutput <- test_file(testFile, reporter = "silent")
     #Modifies the points because they were added to all the tests.
@@ -37,6 +37,8 @@ GetTestResults <- function(project_path, print = FALSE) {
     #Adds the output from the tests in the file to the list
     testthatOutput <- c(testthatOutput, testFileOutput)
   }
+
+  return(testthatOutput)
 
 }
 
