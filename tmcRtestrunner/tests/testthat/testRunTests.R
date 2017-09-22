@@ -1,4 +1,5 @@
-project_path <- project.root
+project_path <- find_root(has_file("DESCRIPTION"))
+project_path <- dirname(project_path)
 path_to_example1 <- paste(sep = "", project_path, "/example_projects/example_project1")
 path_to_json <- paste(set="", path_to_example1, "/.results.json")
 

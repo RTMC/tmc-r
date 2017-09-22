@@ -9,8 +9,8 @@ runTests <- function(project_path, print=FALSE) {
   library('testthat')
   library('jsonlite')
 
-  tmcrtestrunner_project_path <- getwd()
-  setwd(project_path)
+ # tmcrtestrunner_project_path <- getwd()
+  #setwd(project_path)
   results <- GetTestResults(project_path, print)
   .WriteJson(results)
 
