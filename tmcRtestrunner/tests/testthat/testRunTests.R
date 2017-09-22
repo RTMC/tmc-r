@@ -21,9 +21,7 @@ test_that("Hidden functions work", {
 
 test_that("GetTestResults works as intended", {
   results <- GetTestResults(path_to_example1)
-  print(results)
   string <- format(results[[1]]$results[[1]])
   string2 <- "As expected"
-
   expect_equal(string, string2)
 })
