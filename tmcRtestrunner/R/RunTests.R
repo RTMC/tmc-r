@@ -10,6 +10,7 @@ runTests <- function(project_path, print=FALSE) {
   library('jsonlite')
 
   tmcrtestrunner_project_path <- getwd()
+  setwd(project_path)
   results <- GetTestResults(project_path, print)
   .WriteJson(results)
 
@@ -18,7 +19,6 @@ runTests <- function(project_path, print=FALSE) {
 }
 
 GetTestResults <- function(project_path, print = FALSE) {
-
   setwd(project_path)
   #declaring variables to global environment that for example helperTMC.R can use
   points <- list()
