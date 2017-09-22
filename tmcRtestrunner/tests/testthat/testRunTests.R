@@ -1,5 +1,7 @@
 path <- file.path(getwd())
+print(path)
 path <- dirname(dirname(dirname(path)))
+print(path)
 path_to_example1 <- paste(sep = "", path, "/example_projects/example_project1")
 path_to_json <- paste(set="", path_to_example1, "/.results.json")
 
