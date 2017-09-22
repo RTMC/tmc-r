@@ -19,8 +19,7 @@ test_that("Hidden functions work", {
   expect_true(.hidden_function())
 })
 
-test_that("Tests pass", {
-  expect_true(T)
+test_that("GetTestResults works as intended", {
   results <- GetTestResults(path_to_example1)
   string <- format(results[[1]]$results[[1]])
   string2 <- "As expected"
