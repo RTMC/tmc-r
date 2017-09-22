@@ -1,16 +1,25 @@
-runTests <- function(project_path, print = FALSE) {
-  # Runs the tests from project directory and writes results JSON to the root of the project
-  # as .tmc_results.json.
-  #
-  # Args:
-  #  project_path: The absolute path to the root of the project being tested.
-  #  print: If TRUE, prints results; if not, not. DEFAULT is FALSE.
-  #
+# Runs the tests from project directory and writes results JSON to the root of the project
+# as .tmc_results.json.
+#
+# Args:
+#  project_path: The absolute path to the root of the project being tested.
+#  print: If TRUE, prints results; if not, not. DEFAULT is FALSE.
+#
+runTests <- function(project_path, print=FALSE) {
   library('testthat')
   library('jsonlite')
 
   tmcrtestrunner_project_path <- getwd()
   setwd(project_path)
+
+  results <- GetTestResults(project_path, print)
+  .WriteJson(results)
+
+  setwd(tmcrtestrunner_project_path)
+
+}
+
+GetTestResults <- function(project_path, print = FALSE) {
 
   #declaring variables to global environment that for example helperTMC.R can use
   points <- list()
@@ -27,6 +36,16 @@ runTests <- function(project_path, print = FALSE) {
     #Adds the output from the tests in the file to the list
     testthatOutput <- c(testthatOutput, testFileOutput)
   }
+
+}
+
+.WriteJson <- function(results) {
+    #json utf-8 coded:
+    json <- enc2utf8(toJSON(results, pretty = FALSE))
+    json <- prettify(json)
+    #encode json to utf-8 and write file
+    write(json, ".results.json")
+}
 
 .CreateResults <- function(testthatOutput) {
     results = list()
@@ -50,20 +69,6 @@ runTests <- function(project_path, print = FALSE) {
     }
     return (results)
   }
-
-
-  results <- .CreateResults(testthatOutput)
-
-  #json utf-8 coded:
-  json <- enc2utf8(toJSON(results, pretty = FALSE))
-  json <- prettify(json)
-
-  #encode json to utf-8 and write file
-  write(json, ".results.json")
-
-  #restore project path:
-  setwd(tmcrtestrunner_project_path)
-}
 
 #Checks if a single test passed
 .CheckIfResultCorrect <- function(test) {
