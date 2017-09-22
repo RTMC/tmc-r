@@ -3,7 +3,7 @@ runTests <- function(project_path, print = FALSE) {
   # as .tmc_results.json.
   #
   # Args:
-  #  project_path: The path to the root of the project being tested.
+  #  project_path: The absolute path to the root of the project being tested.
   #  print: If TRUE, prints results; if not, not. DEFAULT is FALSE.
   #
   library('testthat')
