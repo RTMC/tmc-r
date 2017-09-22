@@ -1,5 +1,3 @@
-library('jsonlite')
-
 path <- file.path(getwd())
 path <- dirname(dirname(dirname(path)))
 path_to_example1 <- paste(sep = "", path, "/example_projects/example_project1")
