@@ -9,7 +9,7 @@ runTests <- function(project_path, print = FALSE) {
   library('testthat')
   library('jsonlite')
 
-  tmcrtestrunnet_project_path <- getwd()
+  tmcrtestrunner_project_path <- getwd()
   setwd(project_path)
 
   #declaring variables to global environment that for example helperTMC.R can use
@@ -62,7 +62,7 @@ runTests <- function(project_path, print = FALSE) {
   write(json, ".results.json")
 
   #restore project path:
-  setwd(tmcrtestrunnet_project_path)
+  setwd(tmcrtestrunner_project_path)
 }
 
 #Checks if a single test passed
@@ -144,6 +144,7 @@ DummyFunction <- function() {
 }
 
 .hidden_function <- function() {
+  return(T)
 }
 
 Dummy2 <- function() {
