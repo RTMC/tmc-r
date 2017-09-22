@@ -20,5 +20,4 @@ test_that("Hidden functions work", {
 
 test_that("Tests pass", {
   expect_true(T)
-  runTests(path_to_example1)
 })
