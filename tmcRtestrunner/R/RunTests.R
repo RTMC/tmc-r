@@ -10,7 +10,6 @@ runTests <- function(project_path, print=FALSE) {
   library('jsonlite')
 
   tmcrtestrunner_project_path <- getwd()
-
   results <- GetTestResults(project_path, print)
   .WriteJson(results)
 
@@ -29,7 +28,7 @@ GetTestResults <- function(project_path, print = FALSE) {
 
   #Lists all the files in the path beginning with "test" and ending in ".R"
   testFiles <- list.files(path="tests/testthat", pattern = "test.*\\.R", full.names = T, recursive = FALSE)
-  print(getwd())
+
   for (testFile in testFiles) {
     testFileOutput <- test_file(testFile, reporter = "silent")
     #Modifies the points because they were added to all the tests.
@@ -37,9 +36,7 @@ GetTestResults <- function(project_path, print = FALSE) {
     #Adds the output from the tests in the file to the list
     testthatOutput <- c(testthatOutput, testFileOutput)
   }
-
   return(testthatOutput)
-
 }
 
 .WriteJson <- function(results) {
