@@ -1,7 +1,7 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
-sudo: false
+sudo: enable
 cache: packages
 warnings_are_errors: false
 
@@ -17,7 +17,6 @@ notifications:
 env:
   matrix:
         - REPO_TO_TEST=tmcRtestrunner
-        - REPO_TO_TEST=tmcrstudioaddin
 
 after_success:
   - Rscript -e 'library(covr);coveralls()'
