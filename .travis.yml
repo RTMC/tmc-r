@@ -13,8 +13,8 @@ before_install:
 
 env:
   matrix:
-        - REPO_TO_TEST=tmcrstudioaddin
         - REPO_TO_TEST=tmcRtestrunner
+        - REPO_TO_TEST=tmcrstudioaddin
 
 after_success:
   - Rscript -e 'library(covr);codecov()'
