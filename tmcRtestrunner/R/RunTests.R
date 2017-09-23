@@ -5,14 +5,15 @@
 #  project_path: The absolute path to the root of the project being tested.
 #  print: If TRUE, prints results; if not, not. DEFAULT is FALSE.
 #
+
 runTests <- function(project_path, print=FALSE) {
   library('testthat')
   library('jsonlite')
 
- # tmcrtestrunner_project_path <- getwd()
+  tmcrtestrunner_project_path <- getwd()
   #setwd(project_path)
   results <- GetTestResults(project_path, print)
-  .WriteJson(results)
+    .WriteJson(results)
 
   setwd(tmcrtestrunner_project_path)
 }
@@ -40,10 +41,14 @@ GetTestResults <- function(project_path, print = FALSE) {
     #Adds the output from the tests in the file to the list
     testthatOutput <- c(testthatOutput, testFileOutput)
   }
-  return(testthatOutput)
+
+  results <- .CreateResults(testthatOutput)
+
+  return(results)
 }
 
 .WriteJson <- function(results) {
+
     #json utf-8 coded:
     json <- enc2utf8(toJSON(results, pretty = FALSE))
     json <- prettify(json)
