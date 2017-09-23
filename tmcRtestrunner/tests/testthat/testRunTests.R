@@ -35,3 +35,7 @@ test_that("PrintResult produces the right output", {
   string2 <- format("Testi1: PASS")
   expect_equal(string1, string2)
 })
+
+test_that("Dummy test", {
+  expect_true(T)
+})
