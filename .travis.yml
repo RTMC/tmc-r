@@ -1,7 +1,7 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
-sudo: enable
+sudo: false
 cache: packages
 warnings_are_errors: false
 
@@ -11,12 +11,10 @@ r_packages:
 before_install:
   - cd $REPO_TO_TEST
 
-notifications:
-  webhooks: https://coveralls.io/webhook?repo_token=COVERALLS_REPO_TOKEN
-
 env:
   matrix:
         - REPO_TO_TEST=tmcRtestrunner
+        - REPO_TO_TEST=tmcrstudioaddin
 
 after_success:
   - Rscript -e 'library(covr);coveralls()'
