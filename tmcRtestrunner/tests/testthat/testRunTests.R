@@ -29,3 +29,9 @@ test_that("GetTestResults works as intended", {
 test_that("RunTests works", {
   runTests(path_to_example1)
 })
+
+test_that("PrintResult produces the right output", {
+  string1 <- format(.PrintResult("Testi1", "!", FALSE))
+  string2 <- format("Testi1: PASS")
+  expect_equal(string1, string2)
+})
