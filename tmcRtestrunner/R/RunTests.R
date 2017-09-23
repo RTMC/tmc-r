@@ -23,14 +23,15 @@ runTests <- function(project_path, print=FALSE) {
   testFiles <- list.files(path="tests/testthat", pattern = "test.*\\.R", full.names = T, recursive = FALSE)
 
   for (testFile in testFiles) {
+    .GlobalEnv$points <- list()
+    .GlobalEnv$points_for_all_tests <- list()
+
     testFileOutput <- test_file(testFile, reporter = "silent")
     #Modifies the points because they were added to all the tests.
     points <- .AddPointsToAllTests(testFileOutput)
     #Adds the output from the tests in the file to the list
     testthatOutput <- c(testthatOutput, testFileOutput)
   }
-
-  .AddPointsForAllTestToPoints(testFileOutput)
 
   results <- .CreateResults(testthatOutput)
 
