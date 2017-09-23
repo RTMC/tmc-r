@@ -15,6 +15,7 @@ env:
   matrix:
         - REPO_TO_TEST=tmcRtestrunner
         - REPO_TO_TEST=tmcrstudioaddin
+        - COVERALLS_PARALLEL=true
 
 after_success:
   - Rscript -e 'library(covr);coveralls()'
