@@ -5,29 +5,17 @@
 #  project_path: The absolute path to the root of the project being tested.
 #  print: If TRUE, prints results; if not, not. DEFAULT is FALSE.
 #
-
 runTests <- function(project_path, print=FALSE) {
-  library('testthat')
-  library('jsonlite')
-
   tmcrtestrunner_project_path <- getwd()
   #setwd(project_path)
-  results <- GetTestResults(project_path, print)
-    .WriteJson(results)
+  results <- .GetTestResults(project_path, print)
+  .WriteJson(results)
 
   setwd(tmcrtestrunner_project_path)
 }
 
-GetTestResults <- function(project_path, print = FALSE) {
-  library('testthat')
-  library('jsonlite')
+.GetTestResults <- function(project_path, print = FALSE) {
   setwd(project_path)
-
-
-  #declaring variables to global environment that for example helperTMC.R can use
-  points <- list()
-  points_for_all_tests <- list()
-
 
   testthatOutput <- list()
 
@@ -42,13 +30,14 @@ GetTestResults <- function(project_path, print = FALSE) {
     testthatOutput <- c(testthatOutput, testFileOutput)
   }
 
+  .AddPointsForAllTestToPoints(testFileOutput)
+
   results <- .CreateResults(testthatOutput)
 
   return(results)
 }
 
 .WriteJson <- function(results) {
-
     #json utf-8 coded:
     json <- enc2utf8(toJSON(results, pretty = FALSE))
     json <- prettify(json)
@@ -151,20 +140,4 @@ GetTestResults <- function(project_path, print = FALSE) {
                      backtrace=unbox(backtrace),
                      points=testPoints)
   return(testResult)
-}
-
-DummyFunction <- function() {
-  return(TRUE)
-}
-
-.hidden_function <- function() {
-  return(T)
-}
-
-Dummy2 <- function() {
-  return(T)
-}
-
-Dummy3 <- function() {
-  return(F)
 }
