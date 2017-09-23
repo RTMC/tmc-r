@@ -12,3 +12,7 @@ LazyData: true
 Depends:
   testthat,
   jsonlite
+Collate:
+  'ResultsJsonParser.R'
+  'TestthatResultReader.R'
+  'RunTests.R'

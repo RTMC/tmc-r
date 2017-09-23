@@ -1,28 +1,31 @@
 [
     {
-        "status": "passed",
+        "status": "pass",
         "name": "RetTrue works.",
         "message": "",
         "backtrace": "",
         "points": [
+            "r1",
             "r1.1"
         ]
     },
     {
-        "status": "passed",
+        "status": "pass",
         "name": "RetOne works.",
         "message": "",
         "backtrace": "",
         "points": [
+            "r1",
             "r1.2"
         ]
     },
     {
-        "status": "passed",
+        "status": "pass",
         "name": "Add works.",
         "message": "",
         "backtrace": "",
         "points": [
+            "r1",
             "r1.3",
             "r1.4"
         ]
