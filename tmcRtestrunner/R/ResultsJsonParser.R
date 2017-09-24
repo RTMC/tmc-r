@@ -1,3 +1,4 @@
+#Creates JSON based on the test file.
 .CreateJsonResults <- function(testthatOutput) {
   results = list()
   for (test in testthatOutput) {
@@ -19,6 +20,7 @@
   return (results)
 }
 
+#Creates JSON for each different test case.
 .CreateJsonTestResult <- function(testStatus, testName, testMessage,
                                   testPoints, backtrace) {
   testResult <- list(status=unbox(testStatus),
@@ -50,6 +52,7 @@
   return(testMessage)
 }
 
+#Writes JSON based on the whole test result.
 .WriteJson <- function(results) {
   #json utf-8 coded:
   json <- enc2utf8(toJSON(results, pretty = FALSE))
@@ -58,6 +61,7 @@
   write(json, ".results.json")
 }
 
+#Prints results.
 .PrintResultsFromJson <- function(jsonResult) {
   for (test in jsonResult) {
     cat(sep = "", test$name, ": ", test$status, "\n")
