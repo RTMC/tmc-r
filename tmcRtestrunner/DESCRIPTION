@@ -13,6 +13,7 @@ Depends:
   testthat,
   jsonlite
 Collate:
-'ResultsJsonParser.R'
-'TestthatResultReader.R'
-'RunTests.R'
+  'ResultsJsonParser.R'
+  'TestthatResultReader.R'
+  'RunTests.R'
+  'getAvailablePoints.R'
