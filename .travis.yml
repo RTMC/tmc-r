@@ -10,9 +10,10 @@ r_packages:
 
 before_install:
   - cd $REPO_TO_TEST
-  
+
 env:
   matrix:
+        - REPO_TO_TEST=tmcRtestrunner
         - REPO_TO_TEST=tmcrstudioaddin
 
 
