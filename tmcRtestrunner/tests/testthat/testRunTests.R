@@ -56,6 +56,13 @@ test_that("RunTests works even when some of the tests are failing", {
   expect_true(file.exists(paste(sep="", simple_some_tests_fail_project_path, "/.results.json")))
 })
 
+test_that("RunTests works with printing", {
+  cat(format("\n\nTHIS TEST INCLUDES PRINTING\n\n"))
+  runTests(simple_some_tests_fail_project_path, TRUE)
+  cat("\n\nEND OF PRINTING TEST\n\n")
+  expect_true(file.exists(paste(sep="", simple_some_tests_fail_project_path, "/.results.json")))
+})
+
 
 
 # test_that("RunTests works", {
