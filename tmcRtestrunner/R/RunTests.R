@@ -62,3 +62,7 @@ runTests <- function(projectPath, print=FALSE) {
   testPoints <- c(.GlobalEnv$points_for_all_tests, testPoints)
   return(testPoints)
 }
+
+runTestsWithDefault <- function(bol) {
+  runTests(getwd(), bol)
+}
