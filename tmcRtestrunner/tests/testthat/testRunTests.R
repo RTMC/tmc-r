@@ -32,6 +32,11 @@ test_that("Points are added accordingly after calling .AddPointsToTestOutput", {
   expect_false(is.null(testFileOutput[[1]]$points))
 })
 
+test_that("RunTests works as intended", {
+  runTests(simple_all_tests_pass_project_path)
+  expect_true(file.exists(paste(sep="",simple_all_tests_pass_project_path, "/.results.json")))
+})
+
 
 
 # test_that("RunTests works", {
