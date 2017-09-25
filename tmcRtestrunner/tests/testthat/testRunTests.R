@@ -2,6 +2,7 @@ test_resources_dir <- paste(sep = "", getwd(), "/resources")
 
 #projects for testing:
 simple_all_tests_pass_project_path <- paste(sep = "", test_resources_dir, "/simple_all_tests_pass")
+simple_some_tests_fail_project_path <- paste(sep = "", test_resources_dir, "/simple_some_tests_fail")
 
 test_that("Test pass in simple_all_tests_pass", {
   results <- .RunTestsProject(simple_all_tests_pass_project_path)
@@ -35,6 +36,19 @@ test_that("Points are added accordingly after calling .AddPointsToTestOutput", {
 test_that("RunTests works as intended", {
   runTests(simple_all_tests_pass_project_path)
   expect_true(file.exists(paste(sep="",simple_all_tests_pass_project_path, "/.results.json")))
+})
+
+test_that("Not all tests pass in simple_some_tests_fail", {
+  results <- .RunTestsProject(simple_some_tests_fail_project_path)
+  all_tests_pass <- TRUE
+  pass_string <- "As expected"
+  for (i in 1:4) {
+    string <- format(results[[i]]$results[[1]])
+    if(!isTRUE(all.equal(string, pass_string))) {
+      all_tests_pass <- FALSE
+    }
+  }
+  expect_false(all_tests_pass)
 })
 
 
