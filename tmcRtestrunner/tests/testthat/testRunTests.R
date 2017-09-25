@@ -51,6 +51,11 @@ test_that("Not all tests pass in simple_some_tests_fail", {
   expect_false(all_tests_pass)
 })
 
+test_that("RunTests works even when some of the tests are failing", {
+  runTests(simple_some_tests_fail_project_path)
+  expect_true(file.exists(paste(sep="", simple_some_tests_fail_project_path, "/.results.json")))
+})
+
 
 
 # test_that("RunTests works", {

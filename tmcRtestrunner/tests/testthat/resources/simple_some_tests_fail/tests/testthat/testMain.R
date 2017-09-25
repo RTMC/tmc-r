@@ -22,3 +22,7 @@ test("Add works.", c("r1.3", "r1.4"), {
 test("RetFalse returns true", c("r1.5"), {
     expect_true(RetFalse())
 })
+
+test("RetTrue works but there are no points.", NULL, {
+  expect_true(RetTrue())
+})
