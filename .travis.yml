@@ -16,6 +16,5 @@ env:
         - REPO_TO_TEST=tmcRtestrunner
         - REPO_TO_TEST=tmcrstudioaddin
 
-
 after_success:
   - Rscript -e 'library(covr);coveralls()'
