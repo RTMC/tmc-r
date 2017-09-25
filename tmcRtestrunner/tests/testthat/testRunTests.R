@@ -23,6 +23,17 @@ test_that("Tests that pass in simple_all_tests_pass all have the point for all t
   }
 })
 
+#Tests if the hidden function .AddPointsToTestOutput works as intended.
+#It should add points to the dataframe based on which the result-file is created.
+test_that("Points are added accordingly after calling .AddPointsToTestOutput", {
+  testFileOutput <- test_file(paste(sep="", simple_all_tests_pass_project_path, "/tests/testthat/testMain.R"), reporter="silent")
+  expect_equal(testFileOutput[[1]]$points, NULL)
+  testFileOutput <- .AddPointsToTestOutput(testFileOutput)
+  expect_false(is.null(testFileOutput[[1]]$points))
+})
+
+
+
 # test_that("RunTests works", {
 #   runTests(simple_all_tests_pass_project_path)
 # })
