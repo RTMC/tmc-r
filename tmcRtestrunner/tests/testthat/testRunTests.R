@@ -13,6 +13,16 @@ test_that("Test pass in simple_all_tests_pass", {
   }
 })
 
+#Tests that all exercise entrys store the point for all tests.
+test_that("Tests that pass in simple_all_tests_pass all have the point for all tests", {
+  results <- .RunTestsProject(simple_all_tests_pass_project_path)
+  point <- "r1"
+  for (i in 1:3) {
+    vec1 <- results[[i]]$points
+    expect_true(point %in% vec1)
+  }
+})
+
 # test_that("RunTests works", {
 #   runTests(simple_all_tests_pass_project_path)
 # })
