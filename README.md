@@ -1,7 +1,7 @@
 # tmc-r
 
 [![Build Status](https://travis-ci.org/RTMC/tmc-r.svg?branch=master)](https://travis-ci.org/RTMC/tmc-r)
-[![Coverage Status](https://coveralls.io/repos/github/RTMC/tmc-r/badge.svg)](https://coveralls.io/github/RTMC/tmc-r)
+[![Coverage Status](https://coveralls.io/repos/github/RTMC/tmc-r/badge.svg?branch=master)](https://coveralls.io/github/RTMC/tmc-r?branch=master)
 
 ### Documentation
 
