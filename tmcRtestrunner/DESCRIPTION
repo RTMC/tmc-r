@@ -17,3 +17,4 @@ Collate:
   'TestthatResultReader.R'
   'RunTests.R'
   'getAvailablePoints.R'
+RoxygenNote: 6.0.1
